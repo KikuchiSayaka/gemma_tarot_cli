@@ -51,7 +51,8 @@ Additionally, for context-aware functionality, you can implement retrieval-augme
 
 ## Notes
 
-The script uses Ollama’s OpenAI-compatible API (http://localhost:11434/api/chat) with stream: false for easier integration.
+This script sends requests to Ollama’s local HTTP API at http://localhost:11434/api/chat.
+This API accepts input in a format similar to OpenAI’s Chat API (a messages array with role specifications), but does not require or use OpenAI services.
 
 This project is designed for fully offline use — no internet or external APIs are required.
 

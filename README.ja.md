@@ -57,7 +57,8 @@ python3 chat_gemma.py
 
 ## Notes
 
-このスクリプトは、Ollama の OpenAI 互換 API（http://localhost:11434/api/chat）を使用しています。
+本スクリプトは、http://localhost:11434/api/chat で提供される Ollama のローカル HTTP API にリクエストを送信しています。
+この API は OpenAI Chat API に類似した形式（messages 配列と role 指定）を受け付けます。
 "stream": false に設定しているため、ストリーム処理の煩雑さがなく簡単に扱えます。
 完全にオフラインで動作し、インターネット接続や外部 API アクセスは一切不要です。
 
