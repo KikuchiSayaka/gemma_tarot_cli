@@ -1,10 +1,3 @@
-# Usage
-# ollama run gemma3:1b でモデルを起動しておくこと
-# sentence-transformers × FAISS or nomic-embed-textで埋め込み＋類似検索 を行うためにfassとtransformersをインストール
-# pip install faiss-cpu sentence-transformers
-# Ollamaを動かしたのと違うターミナルウインドウでpython3 chat_gemma.py
-
-
 import os
 import json
 import requests
