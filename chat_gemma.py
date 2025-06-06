@@ -30,11 +30,11 @@ if os.path.exists(HISTORY_FILE):
 else:
     history = [{"role": "system", "content": SYSTEM_PROMPT}]
 
-print("🧠 Gemmaチャット開始（CTRL+Cで終了）")
+print("Gemmaチャット開始（CTRL+Cで終了）")
 
 try:
     while True:
-        user_input = input("👤 あなた> ")
+        user_input = input("あなた> ")
         history.append({"role": "user", "content": user_input})
 
         res = requests.post(
@@ -47,7 +47,7 @@ try:
         )
 
         reply = res.json()["message"]["content"]
-        print(f"🤖 Gemma> {reply}\n")
+        print(f"Gemma> {reply}\n")
 
         history.append({"role": "assistant", "content": reply})
 
@@ -55,4 +55,4 @@ try:
             json.dump(history, f, ensure_ascii=False, indent=2)
 
 except KeyboardInterrupt:
-    print("\n💾 終了：履歴を保存しました。")
+    print("\n終了：履歴を保存しました。")

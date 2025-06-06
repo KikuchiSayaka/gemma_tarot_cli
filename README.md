@@ -43,9 +43,11 @@ Save the entire conversation after each turn
 
 ## Customization
 
-You can change the AI's behavior by modifying the SYSTEM_PROMPT in chat_gemma.py.
+The current system prompt assumes Japanese-language input and is tailored for a tarot reading assistant.
+If you are a non-Japanese speaker or wish to use this tool for other purposes (e.g. productivity assistant, coding tutor, strategist),
+you should customize the SYSTEM_PROMPT in chat_gemma.py accordingly.
 
-To enable RAG or past conversation retrieval, integrate FAISS and sentence-transformers using the stored history as a source corpus.
+Additionally, for context-aware functionality, you can implement retrieval-augmented generation (RAG) by indexing past conversation logs with faiss and injecting relevant results into the prompt dynamically.
 
 ## Notes
 
